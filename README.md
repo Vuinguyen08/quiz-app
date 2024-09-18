@@ -1,9 +1,3 @@
-
----
-
-### **2. Quiz App (`README.md`)**
-
-```markdown
 # 📝 Quiz App | クイズアプリ
 
 ![Quiz App Screenshot](./assets/quiz-screenshot.png)
