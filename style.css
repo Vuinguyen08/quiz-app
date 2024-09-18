@@ -1,0 +1,157 @@
+/*Hint
+  button có 3 trạng thái:  active , focus, hover
+*/
+
+/*Reset CSS*/
+* {
+     margin: 0;
+     padding: 0;
+     font-family: "Helvetica Neue", sans-serif;
+     box-sizing: border-box;
+   }
+   
+   /*Định nghĩa biến chung*/
+   :root {
+     --button-blue: #4caf50;
+     --global-background: #8bc6ec;
+   }
+   
+   body {
+     background-color: var(--global-background);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /*Chiều cao tối thiểu của phần tử*/
+     min-height: 100vh;
+   }
+   
+   /*chọn CSS bằng Id của phần tử*/
+   #quiz-container {
+     width: 400px;
+     height: 300px;
+     background-color: white;
+     border-radius: 8px;
+     padding: 20px;
+   }
+   
+   #quiz-container.expanded {
+     height: 340px;
+   }
+   
+   /*Chiều cao của phần tử sẽ là tổng chiều cao của các phần tử bên trong nó. */
+   #quiz-container.reset {
+     /* height: 150px; */
+     height: auto;
+   }
+   
+   /*CSS cho answer options*/
+   /*Cách 1: CSS cho từng phần tử button bên trong*/
+   /* display: block: Chiếm hết width của parent và những phần tử phía sau sẽ đẩy xuống hàng tiếp theo*/
+   /*Khi chưa set width cho phần tử thì width mặc định sẽ là width của content bên trong phần tử đấy*/
+   /* width: 100%: set width bằng width của parent*/
+   /* margin: chỉnh khoảng cách giữa 2 phần tử riêng biệt*/
+   /*padding: điều chỉnh khoảng cách bên trong của phần tử*/
+   /* text-align: canh vị trí của chữ trong phần tử*/
+   /*border: điều chỉnh đường viền phần tử*/
+   /*cursor: thay đổi mouse icon*/
+   .option {
+     display: block;
+     width: 100%;
+     margin-bottom: 10px;
+     padding: 10px;
+     text-align: left;
+     border: 2px solid #ddd;
+     border-radius: 4px;
+     cursor: pointer;
+     background-color: #f9f9f9;
+   }
+   
+   /*Cách 2: CSS cho parent*/
+   /* display: flex: Khai báo với trình duyệt là chúng sử dụng flex box*/
+   /*flex-direction: set hiển chiều dọc or chiều ngang cho phần tử flex box*/
+   /*gap: set độ rộng giữa các phần tử flex box*/
+   /* #answer-options {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+   }
+   
+   #options {
+     width: 100%;
+     padding: 10px;
+     text-align: left;
+     border: 2px solid #ddd;
+     border-radius: 4px;
+   } */
+   
+   /*:hover trạng thái khi chúng ta rê chuột vào button*/
+   .option:hover {
+     background-color: #e0e0e0;
+   }
+   
+   .option.selected {
+     background-color: #d0d0d0;
+   }
+   
+   #question {
+     margin-bottom: 20px;
+   }
+   
+   #submit {
+     margin: 20px auto;
+     display: block;
+     background-color: var(--button-blue);
+     color: white;
+     border-radius: 4px;
+     /* height: 35px;
+     width: 67px; */
+     padding: 10px 20px;
+     /* padding: 10px 20px 10px 20px; */
+     border: none;
+     cursor: pointer;
+   }
+   
+   #submit:hover {
+     background-color: #45a049;
+     /* độ đậm nhạt của element*/
+     /*opacity: 0.8*/
+   }
+   
+   /*ẩn hiện button submit*/
+   /* .hidden {
+     display: none !important;
+   } */
+   #submit.hidden {
+     display: none;
+   }
+   
+   /* #options-container.hidden {
+     visibility: hidden;
+   } */
+   
+   #options-container.hidden {
+     display: none;
+   }
+   
+   #back {
+     margin: 20px auto;
+     display: block;
+     background-color: white;
+     color: rgba(0, 0, 255, 0.567);
+     border-radius: 4px;
+     padding: 10px 20px;
+     border: 1px solid blue;
+     cursor: pointer;
+   }
+   
+   #back:hover {
+     background-color: gray;
+   }
+   
+   #back.hidden {
+     display: none;
+   }
+   
+   /*Flex box*/
+   #quiz-button {
+     display: flex;
