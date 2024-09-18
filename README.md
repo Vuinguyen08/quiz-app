@@ -6,7 +6,7 @@
 ```markdown
 # 📝 Quiz App | クイズアプリ
 
-![Quiz App Screenshot](./assets/quiz-screenshot.png)
+![Quiz App Screenshot](./quiz-screenshot.png)
 
 ## Overview | 概要
 This app allows users to take quizzes and automatically checks if the answers are correct or incorrect.  
