@@ -21,5 +21,5 @@ This app allows users to take quizzes and automatically checks if the answers ar
 1. Clone the repository:  
    リポジトリをクローンします：
    ```bash
-   git clone https://github.com/yourusername/quiz-app.git
+   git clone https://github.com/Vuinguyen08/quiz-app.git
 
